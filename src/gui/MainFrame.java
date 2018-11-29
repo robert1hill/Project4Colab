@@ -1,3 +1,5 @@
+//This file is only for our reference. Not part of project 4
+
 package gui;
 import java.awt.BorderLayout;
 
