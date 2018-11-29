@@ -1,0 +1,79 @@
+{
+    "Lab Section": 12,
+    "Last Modified": 2018-10-18,
+    "OU ID": 113400527,
+    "OU EMAIL": "roberthill@ou.edu",
+    "Tasks": [
+        {
+            "Description": "Make TODO",
+            "Estimated Time (Minutes)": 15,
+            "Actual Time (Minutes)": 20,
+        },
+        {
+            "Description": "Write unit tests",
+            "Estimated Time (Minutes)": 100,
+            "Actual Time (Minutes)": 200,
+        },
+        {
+            "Description": "Delete stuff that is no longer used",
+            "Estimated Time (Minutes)": 7,
+            "Actual Time (Minutes)": 10,
+        },
+        {
+            "Description": "Create additional interface methods",
+            "Estimated Time (Minutes)": 7,
+            "Actual Time (Minutes)": 10,
+        },
+        {
+            "Description": "Create Instance Variables for both classes",
+            "Estimated Time (Minutes)": 10,
+            "Actual Time (Minutes)": 10,
+        },
+        {
+            "Description": "Stare hopelessly at the UML",
+            "Estimated Time (Minutes)": 15,
+            "Actual Time (Minutes)": 3,
+        },
+        {
+            "Description": "learn how to use ZonedDateTime",
+            "Estimated Time (Minutes)": 30,
+            "Actual Time (Minutes)": 40,
+        },
+        {
+            "Description": "Create new methods in Statistics",
+            "Estimated Time (Minutes)": 60,
+            "Actual Time (Minutes)": 45,
+        },
+        {
+            "Description": "learn how to use the ___maps",
+            "Estimated Time (Minutes)": 30,
+            "Actual Time (Minutes)": 25,
+        },
+        {
+            "Description": "Create new methods for MapData",
+            "Estimated Time (Minutes)": 30,
+            "Actual Time (Minutes)": 35,
+        },
+        {
+            "Description": "Check and change GregorianCalendar",
+            "Estimated Time (Minutes)": 35,
+            "Actual Time (Minutes)": 20,
+        },
+        {
+            "Description": "Fill in documentation and check documentation",
+            "Estimated Time (Minutes)": 95,
+            "Actual Time (Minutes)": 100,
+        },
+        {
+            "Description": "Debugging",
+            "Estimated Time (Minutes)": 30,
+            "Actual Time (Minutes)": 10,
+        },
+        {
+            "Description": "Testing",
+            "Estimated Time (Minutes)": 30,
+            "Actual Time (Minutes)": 10,
+        },
+        
+    ]
+}
