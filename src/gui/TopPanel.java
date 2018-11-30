@@ -17,13 +17,11 @@ public class TopPanel extends JPanel
     
     TopPanel()
     {
-     
         setLayout(new BorderLayout());
         sloganBar = new SloganBar();
         fileMenuBar = new FileMenuBar();
         
         add(sloganBar, BorderLayout.SOUTH);
         add(fileMenuBar, BorderLayout.NORTH);
-        
     }
 }

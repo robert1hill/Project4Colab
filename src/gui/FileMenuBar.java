@@ -3,14 +3,18 @@ package gui;
 
 import java.awt.BorderLayout;
 import java.awt.Color;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 import javax.swing.JMenu;
 import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
 import javax.swing.JPanel;
 import javax.swing.JTextArea;
+import javax.swing.event.MenuKeyEvent;
+import javax.swing.event.MenuKeyListener;
 
-public class FileMenuBar extends JPanel
+public class FileMenuBar extends JPanel implements ActionListener
 {
     private JMenuBar menuBar; 
     private JMenu dropDown;
@@ -35,8 +39,25 @@ public class FileMenuBar extends JPanel
         //creating individual menu items and adding them to the menu
         openItem = new JMenuItem("Open Data File");
         exitItem = new JMenuItem("Exit");
+        openItem.addActionListener(this);
+        exitItem.addActionListener(this);
         
         dropDown.add(openItem);
         dropDown.add(exitItem);
+    }
+
+    @Override
+    public void actionPerformed(ActionEvent e)
+    {
+        JMenuItem clicked = (JMenuItem)e.getSource();
+        
+        if (clicked == exitItem)
+        {
+            System.exit(0);
+        }
+        else if (clicked == openItem)
+        {
+            // TODO: Implement this to open files and all that stuff...
+        }
     }
 }
