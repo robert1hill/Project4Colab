@@ -11,7 +11,6 @@ public class ButtonBar extends JPanel implements ActionListener
         private JButton calcButton;
         private JButton exitButton;
         
-        
         public ButtonBar()
         {
             calcButton = new JButton("Calculate");
