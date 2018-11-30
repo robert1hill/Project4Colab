@@ -1,5 +1,6 @@
 package gui;
 
+import java.awt.Color;
 import java.awt.GridLayout;
 
 import javax.swing.JCheckBox;
@@ -46,6 +47,7 @@ public class ParameterPanel extends JPanel
     public ParameterPanel()
     {
         super(new GridLayout(NUM_BUTTONS, 1));
+        setBackground(Color.gray);
         add(tair);
         add(ta9m);
         add(srad);
