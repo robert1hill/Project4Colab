@@ -7,12 +7,12 @@ import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
 
-public class TextPanel extends JPanel
+public class NOTPROJ4TextPanel extends JPanel
 {
     
     private JTextArea textArea;
     
-    public TextPanel()
+    public NOTPROJ4TextPanel()
     {
         textArea = new JTextArea();
         

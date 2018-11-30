@@ -7,13 +7,13 @@ import java.awt.event.ActionListener;
 import javax.swing.JButton;
 import javax.swing.JPanel;
 
-public class Toolbar extends JPanel implements ActionListener
+public class NOTPROJ4Toolbar extends JPanel implements ActionListener
 {
     private JButton startButton;
     private JButton endButton;
-    private TextPanel textPanel;
+    private NOTPROJ4TextPanel textPanel;
     
-    public Toolbar()
+    public NOTPROJ4Toolbar()
     {
         startButton = new JButton("Start");
         endButton = new JButton("terminate");
@@ -26,7 +26,7 @@ public class Toolbar extends JPanel implements ActionListener
         
     }
     
-    public void setTextPanel(TextPanel textPanel)
+    public void setTextPanel(NOTPROJ4TextPanel textPanel)
     {
         this.textPanel = textPanel;
     }

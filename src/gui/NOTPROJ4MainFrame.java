@@ -5,20 +5,20 @@ import java.awt.BorderLayout;
 
 import javax.swing.JFrame;
 
-public class MainFrame extends JFrame
+public class NOTPROJ4MainFrame extends JFrame
 {
-    private TextPanel textPanel;
-    private Toolbar toolbar;
-    private TextPanel tp;
+    private NOTPROJ4TextPanel textPanel;
+    private NOTPROJ4Toolbar toolbar;
+    private NOTPROJ4TextPanel tp;
     
-    public MainFrame()
+    public NOTPROJ4MainFrame()
     {
         super("hello");
         
         setLayout(new BorderLayout());
-        toolbar = new Toolbar();
-        textPanel = new TextPanel();
-        tp = new TextPanel();
+        toolbar = new NOTPROJ4Toolbar();
+        textPanel = new NOTPROJ4TextPanel();
+        tp = new NOTPROJ4TextPanel();
         
         toolbar.setTextPanel(textPanel);
         
