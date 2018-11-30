@@ -17,7 +17,7 @@ public class StatisticsPanel extends JPanel
     /**
      * 
      */
-    private static final int NUM_BUTTONS = 5;
+    private static final int NUM_BUTTONS = 3;
     
     /**
      * 
