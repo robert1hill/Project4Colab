@@ -19,6 +19,8 @@ public class ButtonBar extends JPanel implements ActionListener
         
             calcButton.addActionListener(this);
             exitButton.addActionListener(this);
+            calcButton.addActionListener(this);
+            exitButton.addActionListener(this);
             
             add(calcButton);
             add(exitButton);
@@ -43,8 +45,7 @@ public class ButtonBar extends JPanel implements ActionListener
             }
             else if (clicked == exitButton)
             {
-                //TODO : exit the system
-                //textPanel.appendText("Keep dreaming" + '\n');
+                System.exit(0);
             }
             
         }
