@@ -37,8 +37,6 @@ public class MesonetFrame extends JFrame
         setSize(800, 600);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setVisible(true);
-        
-        
     }
     
     

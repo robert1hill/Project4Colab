@@ -47,7 +47,4 @@ public class NOTPROJ4Toolbar extends JPanel implements ActionListener
         }
         
     }
-    
-    
-    
 }

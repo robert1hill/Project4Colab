@@ -4,6 +4,7 @@ import java.awt.Color;
 import java.awt.GridLayout;
 
 import javax.swing.JCheckBox;
+import javax.swing.JLabel;
 import javax.swing.JPanel;
 
 public class ParameterPanel extends JPanel
@@ -18,6 +19,11 @@ public class ParameterPanel extends JPanel
      * 
      */
     private static final int NUM_BUTTONS = 5;
+    
+    /**
+     * 
+     */
+    private JLabel title = new JLabel("Parameters");
     
     /**
      * 
@@ -46,8 +52,9 @@ public class ParameterPanel extends JPanel
     
     public ParameterPanel()
     {
-        super(new GridLayout(NUM_BUTTONS, 1));
+        super(new GridLayout(NUM_BUTTONS+1, 1));
         setBackground(Color.gray);
+        add(title);
         add(tair);
         add(ta9m);
         add(srad);

@@ -4,6 +4,7 @@ import java.awt.Color;
 import java.awt.GridLayout;
 
 import javax.swing.ButtonGroup;
+import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JRadioButton;
 
@@ -18,6 +19,11 @@ public class StatisticsPanel extends JPanel
      * 
      */
     private static final int NUM_BUTTONS = 3;
+    
+    /**
+     * 
+     */
+    private JLabel title = new JLabel("Statistic");
     
     /**
      * 
@@ -41,11 +47,12 @@ public class StatisticsPanel extends JPanel
     
     public StatisticsPanel()
     {
-        super(new GridLayout(NUM_BUTTONS, 1));
+        super(new GridLayout(NUM_BUTTONS+1, 1));
         setBackground(Color.darkGray);
         buttons.add(min);
         buttons.add(max);
         buttons.add(avg);
+        add(title);
         add(min);
         add(max);
         add(avg);
