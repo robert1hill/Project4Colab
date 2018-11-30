@@ -9,7 +9,10 @@ public class MesonetFrame extends JFrame
     
     private ButtonBar buttonBar;
     private TopPanel topPanel;
-    private FileMenuBar fileMenuBar;
+    private StatisticsPanel statsPanel;
+    private ParameterPanel paramPanel;
+    private TablePanel tablePanel;
+    
 
     public MesonetFrame()
     {
@@ -17,19 +20,19 @@ public class MesonetFrame extends JFrame
         
         setLayout(new BorderLayout());
         buttonBar = new ButtonBar();
-        //sloganBar = new SloganBar();
         topPanel = new TopPanel();
-        fileMenuBar = new FileMenuBar();
-        //textPanel = new TextPanel();
-        //tp = new TextPanel();
-        
-        //toolbar.setTextPanel(textPanel);
+        statsPanel = new StatisticsPanel();
+        paramPanel = new ParameterPanel();
+        tablePanel = new TablePanel();
         
         add(buttonBar, BorderLayout.SOUTH);
         add(topPanel, BorderLayout.NORTH);
-        //add(fileMenuBar, BorderLayout.NORTH);
-        //add(textPanel, BorderLayout.CENTER);
-        //add(tp, BorderLayout.SOUTH);
+        
+        //may need to restructure this, making params and stats into one panel, like with top panel
+        //add(paramPanel, BorderLayout.WEST);
+        //add(statsPanel, BorderLayout.CENTER);
+        //add(tablePanel, BorderLayout.EAST);
+
         
         setSize(800, 600);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
