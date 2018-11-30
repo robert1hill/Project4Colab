@@ -8,6 +8,8 @@ public class MesonetFrame extends JFrame
 {
     
     private ButtonBar buttonBar;
+    private TopPanel topPanel;
+    private FileMenuBar fileMenuBar;
 
     public MesonetFrame()
     {
@@ -15,12 +17,17 @@ public class MesonetFrame extends JFrame
         
         setLayout(new BorderLayout());
         buttonBar = new ButtonBar();
+        //sloganBar = new SloganBar();
+        topPanel = new TopPanel();
+        fileMenuBar = new FileMenuBar();
         //textPanel = new TextPanel();
         //tp = new TextPanel();
         
         //toolbar.setTextPanel(textPanel);
         
         add(buttonBar, BorderLayout.SOUTH);
+        add(topPanel, BorderLayout.NORTH);
+        //add(fileMenuBar, BorderLayout.NORTH);
         //add(textPanel, BorderLayout.CENTER);
         //add(tp, BorderLayout.SOUTH);
         
