@@ -2,6 +2,7 @@ package gui;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.Color;
 
 import javax.swing.JButton;
 import javax.swing.JPanel;
@@ -10,6 +11,7 @@ public class ButtonBar extends JPanel implements ActionListener
     {
         private JButton calcButton;
         private JButton exitButton;
+        
         
         
         public ButtonBar()
@@ -22,6 +24,9 @@ public class ButtonBar extends JPanel implements ActionListener
             
             add(calcButton);
             add(exitButton);
+            
+            setBackground(Color.GRAY);
+            
             
         }
         
