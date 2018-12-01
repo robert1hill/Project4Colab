@@ -9,8 +9,7 @@ public class MesonetFrame extends JFrame
     
     private ButtonBar buttonBar;
     private TopPanel topPanel;
-    private StatisticsPanel statsPanel;
-    private ParameterPanel paramPanel;
+    private LeftPanel leftPanel;
     private TablePanel tablePanel;
     
 
@@ -21,16 +20,14 @@ public class MesonetFrame extends JFrame
         setLayout(new BorderLayout());
         buttonBar = new ButtonBar();
         topPanel = new TopPanel();
-        statsPanel = new StatisticsPanel();
-        paramPanel = new ParameterPanel();
+        leftPanel = new LeftPanel();
         tablePanel = new TablePanel();
         
         add(buttonBar, BorderLayout.SOUTH);
         add(topPanel, BorderLayout.NORTH);
         
         //may need to restructure this, making params and stats into one panel, like with top panel
-        add(paramPanel, BorderLayout.WEST);
-        add(statsPanel, BorderLayout.CENTER);
+        add(leftPanel, BorderLayout.WEST);
         add(tablePanel, BorderLayout.EAST);
 
         
