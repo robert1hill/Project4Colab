@@ -18,6 +18,11 @@ public class TablePanel extends JPanel
      */
     private JScrollPane outline;
     
+    /**
+     * 
+     */
+    private int numDataRows;
+    
     
     public TablePanel()
     {
@@ -34,11 +39,24 @@ public class TablePanel extends JPanel
         table.getColumnModel().getColumn(4).setHeaderValue("Reporting Stations");
         table.getColumnModel().getColumn(5).setHeaderValue("Date");
         
-        //setting table column widths
-        //table.getTableHeader().getDefaultRenderer()
-        
-        
+        numDataRows = 0;
         
         add(outline, BorderLayout.CENTER);
+    }
+    
+    
+    public void newDataRow(String inStation, String inParam, String inStat, Double inVal, Double inRepNum, String inDate)
+    {
+        
+        
+        table.setValueAt(inStation, numDataRows, 0);
+        table.setValueAt(inParam, numDataRows, 1);
+        table.setValueAt(inStat, numDataRows, 2);
+        table.setValueAt(inVal, numDataRows, 3);
+        table.setValueAt(inRepNum, numDataRows, 4);
+        table.setValueAt(inDate, numDataRows, 5);
+        
+        
+        ++numDataRows;
     }
 }
