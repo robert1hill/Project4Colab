@@ -33,7 +33,7 @@ public class FileMenuBar extends JPanel implements ActionListener
         add(menuBar, BorderLayout.WEST);
         
         //Creating the menu itself and adding it to the menubar
-        dropDown = new JMenu("file");
+        dropDown = new JMenu("File");
         menuBar.add(dropDown);
         
         //creating individual menu items and adding them to the menu
