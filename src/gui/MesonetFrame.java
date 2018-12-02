@@ -25,8 +25,6 @@ public class MesonetFrame extends JFrame
         
         add(buttonBar, BorderLayout.SOUTH);
         add(topPanel, BorderLayout.NORTH);
-        
-        //may need to restructure this, making params and stats into one panel, like with top panel
         add(leftPanel, BorderLayout.WEST);
         add(tablePanel, BorderLayout.EAST);
 

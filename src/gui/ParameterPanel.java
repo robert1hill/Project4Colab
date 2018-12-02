@@ -1,11 +1,14 @@
 package gui;
 
 import java.awt.Color;
+import java.awt.GridBagConstraints;
 import java.awt.GridLayout;
+import java.awt.Insets;
 
 import javax.swing.JCheckBox;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
 
 public class ParameterPanel extends JPanel
 {
@@ -24,6 +27,11 @@ public class ParameterPanel extends JPanel
      * 
      */
     private JLabel title = new JLabel("Parameters");
+    
+    /**
+     * 
+     */
+    private GridBagConstraints constraints = new GridBagConstraints();
     
     /**
      * 
@@ -54,6 +62,7 @@ public class ParameterPanel extends JPanel
     {
         super(new GridLayout(NUM_BUTTONS+1, 1));
         setBackground(Color.gray);
+        constraints.insets = new Insets(5,5,5,5);
         add(title);
         add(tair);
         add(ta9m);
