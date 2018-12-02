@@ -26,7 +26,7 @@ public class MesonetFrame extends JFrame
         add(buttonBar, BorderLayout.SOUTH);
         add(topPanel, BorderLayout.NORTH);
         add(leftPanel, BorderLayout.WEST);
-        add(tablePanel, BorderLayout.EAST);
+        add(tablePanel, BorderLayout.CENTER);
 
         
         setSize(800, 600);
