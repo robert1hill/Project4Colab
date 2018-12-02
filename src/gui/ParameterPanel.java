@@ -12,6 +12,7 @@ import javax.swing.JPanel;
 import javax.swing.border.Border;
 import javax.swing.border.CompoundBorder;
 import javax.swing.border.EmptyBorder;
+import javax.swing.border.TitledBorder;
 
 public class ParameterPanel extends JPanel
 {
@@ -44,17 +45,21 @@ public class ParameterPanel extends JPanel
     /**
      * 
      */
-    private Border out = BorderFactory.createLineBorder(Color.gray, 5);
+    private Border out = BorderFactory.createLineBorder(Color.gray, 2);
     
     /**
      * 
      */
     private CompoundBorder border = new CompoundBorder(out,in);
-            
+    
     /**
      * 
      */
-    private JCheckBox tair = new JCheckBox("TAIR");
+    private TitledBorder titledBorder = new TitledBorder(border, "Parameters");
+    /**
+     * 
+     */
+    private JCheckBox tair = new JCheckBox("TAIR    ");
     
     /**
      * 
@@ -78,11 +83,10 @@ public class ParameterPanel extends JPanel
     
     public ParameterPanel()
     {
-        super(new GridLayout(NUM_BUTTONS+1, 1));
+        super(new GridLayout(NUM_BUTTONS, 1));
         setBackground(Color.gray);
         constraints.insets = new Insets(5,5,5,5);
-        setBorder(border);
-        add(title);
+        setBorder(titledBorder);
         add(tair);
         add(ta9m);
         add(srad);
