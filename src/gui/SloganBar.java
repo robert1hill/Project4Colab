@@ -15,8 +15,8 @@ public class SloganBar extends JPanel
        
         slogan = new JTextArea();
         slogan.setText("Mesonet - We make a MES Of the interNET");
-        slogan.setBackground(Color.LIGHT_GRAY);
+        slogan.setBackground(Color.lightGray);
         add(slogan);
-        setBackground(Color.LIGHT_GRAY);
+        setBackground(Color.lightGray);
     }
 }

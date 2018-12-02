@@ -5,10 +5,14 @@ import java.awt.GridBagConstraints;
 import java.awt.GridLayout;
 import java.awt.Insets;
 
+import javax.swing.BorderFactory;
 import javax.swing.JCheckBox;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.border.Border;
+import javax.swing.border.CompoundBorder;
 import javax.swing.border.EmptyBorder;
+import javax.swing.border.TitledBorder;
 
 public class ParameterPanel extends JPanel
 {
@@ -26,17 +30,32 @@ public class ParameterPanel extends JPanel
     /**
      * 
      */
-    private JLabel title = new JLabel("Parameters");
-    
-    /**
-     * 
-     */
     private GridBagConstraints constraints = new GridBagConstraints();
     
     /**
      * 
      */
-    private JCheckBox tair = new JCheckBox("TAIR");
+    private Border in = BorderFactory.createLineBorder(Color.blue, 1);
+    
+    /**
+     * 
+     */
+    private Border out = BorderFactory.createLineBorder(Color.lightGray, 2);
+    
+    /**
+     * 
+     */
+    private CompoundBorder border = new CompoundBorder(out,in);
+    
+    /**
+     * 
+     */
+    private TitledBorder titledBorder = new TitledBorder(border, "Parameters");
+    
+    /**
+     * 
+     */
+    private JCheckBox tair = new JCheckBox("TAIR    ");
     
     /**
      * 
@@ -60,10 +79,10 @@ public class ParameterPanel extends JPanel
     
     public ParameterPanel()
     {
-        super(new GridLayout(NUM_BUTTONS+1, 1));
-        setBackground(Color.gray);
+        super(new GridLayout(NUM_BUTTONS, 1));
+        setBackground(Color.lightGray);
         constraints.insets = new Insets(5,5,5,5);
-        add(title);
+        setBorder(titledBorder);
         add(tair);
         add(ta9m);
         add(srad);
