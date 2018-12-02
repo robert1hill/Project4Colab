@@ -3,10 +3,14 @@ package gui;
 import java.awt.Color;
 import java.awt.GridLayout;
 
+import javax.swing.BorderFactory;
 import javax.swing.ButtonGroup;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JRadioButton;
+import javax.swing.border.Border;
+import javax.swing.border.CompoundBorder;
+import javax.swing.border.TitledBorder;
 
 public class StatisticsPanel extends JPanel
 {
@@ -24,6 +28,26 @@ public class StatisticsPanel extends JPanel
      * 
      */
     private JLabel title = new JLabel("Statistic");
+    
+    /**
+     * 
+     */
+    private Border in = BorderFactory.createLineBorder(Color.yellow, 1);
+    
+    /**
+     * 
+     */
+    private Border out = BorderFactory.createLineBorder(Color.gray, 2);
+    
+    /**
+     * 
+     */
+    private CompoundBorder border = new CompoundBorder(out,in);
+    
+    /**
+     * 
+     */
+    private TitledBorder titledBorder = new TitledBorder(border, "Statistic");
     
     /**
      * 
@@ -47,12 +71,12 @@ public class StatisticsPanel extends JPanel
     
     public StatisticsPanel()
     {
-        super(new GridLayout(NUM_BUTTONS+1, 1));
-        setBackground(Color.darkGray);
+        super(new GridLayout(NUM_BUTTONS, 1));
+        setBackground(Color.gray);
         buttons.add(min);
         buttons.add(max);
         buttons.add(avg);
-        add(title);
+        setBorder(titledBorder);
         add(min);
         add(max);
         add(avg);
