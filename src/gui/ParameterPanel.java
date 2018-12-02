@@ -5,9 +5,12 @@ import java.awt.GridBagConstraints;
 import java.awt.GridLayout;
 import java.awt.Insets;
 
+import javax.swing.BorderFactory;
 import javax.swing.JCheckBox;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.border.Border;
+import javax.swing.border.CompoundBorder;
 import javax.swing.border.EmptyBorder;
 
 public class ParameterPanel extends JPanel
@@ -33,6 +36,21 @@ public class ParameterPanel extends JPanel
      */
     private GridBagConstraints constraints = new GridBagConstraints();
     
+    /**
+     * 
+     */
+    private Border in = BorderFactory.createLineBorder(Color.blue, 1);
+    
+    /**
+     * 
+     */
+    private Border out = BorderFactory.createLineBorder(Color.gray, 5);
+    
+    /**
+     * 
+     */
+    private CompoundBorder border = new CompoundBorder(out,in);
+            
     /**
      * 
      */
@@ -63,6 +81,7 @@ public class ParameterPanel extends JPanel
         super(new GridLayout(NUM_BUTTONS+1, 1));
         setBackground(Color.gray);
         constraints.insets = new Insets(5,5,5,5);
+        setBorder(border);
         add(title);
         add(tair);
         add(ta9m);
