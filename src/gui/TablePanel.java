@@ -13,7 +13,7 @@ import javax.swing.JTable;
 public class TablePanel extends JPanel
 {
     /**
-     * Jtable for the data to be displayed in.
+     * J table for the data to be displayed in.
      */
     private JTable table = new JTable(100, 6);
     
