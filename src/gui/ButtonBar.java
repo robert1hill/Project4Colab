@@ -25,8 +25,6 @@ public class ButtonBar extends JPanel implements ActionListener
         
             calcButton.addActionListener(this);
             exitButton.addActionListener(this);
-            calcButton.addActionListener(this);
-            exitButton.addActionListener(this);
             
             add(calcButton);
             add(exitButton);
@@ -61,12 +59,12 @@ public class ButtonBar extends JPanel implements ActionListener
                 
                 
                 //retreives the desired data
-                
-                Statistics currStat = mapData.getStatistics(StatsType.MINIMUM, "TAIR");
+                String paramID = "TAIR";
+                Statistics currStat = mapData.getStatistics(StatsType.MINIMUM, paramID);
                 
                 
                 //adds a new row of data with the retrieved data.
-                table.newDataRow(currStat.getStation(), currStat.getStid(), currStat.getStatsType().toString(), currStat.getValue(), currStat.getNumberOfReportingStations(), currStat.getUTCDateTime());
+                table.newDataRow(currStat.getStid(), paramID, currStat.getStatsType().toString(), currStat.getValue(), currStat.getNumberOfReportingStations(), currStat.getUTCDateTime());
             }
             else if (clicked == exitButton)
             {
