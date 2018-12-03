@@ -1,4 +1,4 @@
-package dataAnalysis;
+, package dataAnalysis;
 import static org.junit.Assert.*;
 
 import java.time.ZoneId;
@@ -33,13 +33,13 @@ public class StatisticsTest
         //gc2.set(2018, 11, 10, 23, 30);
         
 
-        test = new Statistics(55.5, "TAIR", gc, -1, StatsType.MINIMUM);
-        test1 = new Statistics(-999.0, "NONE", gc, -1, StatsType.AVERAGE);
-        test2 = new Statistics(55.5, "TAIR", gc2, -1, StatsType.MINIMUM);
+        test = new Statistics(55.5, "TAIR", gc, -1, StatsType.MINIMUM, test.getStid());
+        test1 = new Statistics(-999.0, "NONE", gc, -1, StatsType.AVERAGE, test1.getStid());
+        test2 = new Statistics(55.5, "TAIR", gc2, -1, StatsType.MINIMUM, test2.getStid());
         
-        ztest = new Statistics(55.5, "TAIR", z1, -1, StatsType.MINIMUM);
-        ztest1 = new Statistics(-999.0, "NONE", z1, -1, StatsType.AVERAGE);
-        ztest2 = new Statistics(55.5, "TAIR", z2, -1, StatsType.MINIMUM);
+        ztest = new Statistics(55.5, "TAIR", z1, -1, StatsType.MINIMUM, ztest.getStid());
+        ztest1 = new Statistics(-999.0, "NONE", z1, -1, StatsType.AVERAGE, ztest1.getStid());
+        ztest2 = new Statistics(55.5, "TAIR", z2, -1, StatsType.MINIMUM, ztest2.getStid());
         
 
     }
