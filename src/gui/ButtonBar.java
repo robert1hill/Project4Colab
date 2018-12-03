@@ -53,12 +53,13 @@ public class ButtonBar extends JPanel implements ActionListener
             
             if (clicked == calcButton)
             {
-                //TODO : add running the calc
+                
                 
                 //checks which buttons are selected
-                
+                //TODO : check which buttons are selected.
                 
                 //retreives the desired data
+                //FIXME : change this to match the buttons that are selected.
                 String paramID = "TAIR";
                 Statistics currStat = mapData.getStatistics(StatsType.MINIMUM, paramID);
                 
