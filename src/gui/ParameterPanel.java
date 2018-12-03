@@ -4,6 +4,7 @@ import java.awt.Color;
 import java.awt.GridBagConstraints;
 import java.awt.GridLayout;
 import java.awt.Insets;
+import java.util.ArrayList;
 
 import javax.swing.BorderFactory;
 import javax.swing.JCheckBox;
@@ -82,5 +83,32 @@ public class ParameterPanel extends JPanel
         add(srad);
         add(wspd);
         add(pres);
+    }
+    
+    public ArrayList<String> getSelected()
+    {
+        ArrayList<String> out = new ArrayList<>();
+        
+        if (tair.isSelected())
+        {
+            out.add("TAIR");
+        }
+        if (ta9m.isSelected())
+        {
+            out.add("TA9M");
+        }
+        if (srad.isSelected())
+        {
+            out.add("SRAD");
+        }
+        if (wspd.isSelected())
+        {
+            out.add("WSPD");
+        }
+        if (pres.isSelected())
+        {
+            out.add("PRES");
+        }
+        return out;
     }
 }
