@@ -1,6 +1,7 @@
 package gui;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
 import java.awt.Color;
 
 import javax.swing.JButton;
@@ -59,19 +60,27 @@ public class ButtonBar extends JPanel implements ActionListener
                 //TODO : check which buttons are selected.
                 StatsType stat = MesonetFrame.leftPanel.stats.getSelected();
                 //FIXME : started to add this.
-                String paramID = MesonetFrame.leftPanel.param.getSelected();
+                ArrayList<String> paramIDs = MesonetFrame.leftPanel.param.getSelected();
                 
+              //retreives the desired data
                 if (stat != null)
                 {
+                    if (!paramIDs.isEmpty())
+                    {
+                    
+                    for (String eachParam : paramIDs)
+                    {
+                        Statistics currStat = mapData.getStatistics(stat, eachParam);
+                        
+                      //adds a new row of data with the retrieved data.
+                        table.newDataRow(currStat.getStid(), eachParam, currStat.getStatsType().toString(), currStat.getValue(), currStat.getNumberOfReportingStations(), currStat.getUTCDateTime());
+                        
+                    }
                 
-                //retreives the desired data
-                //FIXME : change this to match the buttons that are selected.
-                String paramID = "TAIR";
-                Statistics currStat = mapData.getStatistics(stat, paramID);
+                    }
                 
-                //adds a new row of data with the retrieved data.
-                table.newDataRow(currStat.getStid(), paramID, currStat.getStatsType().toString(), currStat.getValue(), currStat.getNumberOfReportingStations(), currStat.getUTCDateTime());
-            
+                
+                
                 }
             }
             else if (clicked == exitButton)
