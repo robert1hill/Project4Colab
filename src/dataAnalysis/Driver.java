@@ -8,7 +8,8 @@ public class Driver {
 		
 	    MapData test1 = new MapData(2018, 8, 1, 7, 0, "data1");
 	    MapData test2 = new MapData(2018, 8, 30, 17, 45, "data1");
-	    //System.out.println(test2.toString());
+	    System.out.println(test1.toString());
+	    System.out.println(test2.toString());
 
 	}
 

@@ -14,6 +14,8 @@ import javax.swing.border.CompoundBorder;
 import javax.swing.border.EmptyBorder;
 import javax.swing.border.TitledBorder;
 
+import dataAnalysis.StatsType;
+
 public class ParameterPanel extends JPanel
 {
 
@@ -82,5 +84,36 @@ public class ParameterPanel extends JPanel
         add(srad);
         add(wspd);
         add(pres);
+    }
+    
+    /**
+     * @return
+     */
+    public String[] getSelected()
+    {
+        
+        String[] selectedParams = new String[5];
+        
+        if (tair.isSelected())
+        {
+            selectedParams[0] = "TAIR";
+        }
+        if (ta9m.isSelected())
+        {
+            selectedParams[0] = "TA9M";
+        }
+        if (srad.isSelected())
+        {
+            selectedParams[0] = "SRAD";
+        }
+        if (wspd.isSelected())
+        {
+            selectedParams[0] = "WSPD";
+        }
+        if (pres.isSelected())
+        {
+            selectedParams[0] = "PRES";
+        }
+
     }
 }
