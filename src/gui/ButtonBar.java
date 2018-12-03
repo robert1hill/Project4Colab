@@ -14,11 +14,30 @@ import dataAnalysis.StatsType;
 
 public class ButtonBar extends JPanel implements ActionListener
     {
-        private JButton calcButton;
-        private JButton exitButton;
-        private TablePanel table;
-        private MapData mapData;
+        
+    /**
+     * Jbutton for the calculate button
+     */
+    private JButton calcButton;
+        
+    /**
+     * JButton for the exit button
+     */
+    private JButton exitButton;
+        
+    /**
+     * the table of that the data will be displayed in
+     */
+    private TablePanel table;
+        
+    /**
+     * the map data thing
+     */
+    private MapData mapData;
 
+        /**
+         * constructor for button bar.
+         */
         public ButtonBar()
         {
             calcButton = new JButton("Calculate");
@@ -33,11 +52,21 @@ public class ButtonBar extends JPanel implements ActionListener
             setBackground(Color.GRAY);
         }
         
+        
+        /**
+         * general setter
+         * @param table
+         */
         public void setTablePanel(TablePanel table)
         {
             this.table = table;
         }
         
+        
+        /**
+         * general setter
+         * @param mapData
+         */
         public void setMapData(MapData mapData)
         {
             this.mapData = mapData;
@@ -45,6 +74,9 @@ public class ButtonBar extends JPanel implements ActionListener
         
         
 
+        /** (non-Javadoc)
+         *  This is a cool action event
+         */
         @Override
         public void actionPerformed(ActionEvent e)
         {

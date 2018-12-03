@@ -6,24 +6,31 @@ import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JTable;
 
+/**
+ * @author Robert
+ *
+ */
 public class TablePanel extends JPanel
 {
     /**
-     * 
+     * Jtable for the data to be displayed in.
      */
     private JTable table = new JTable(100, 6);
     
     /**
-     * 
+     * the scroll pane for the table to be displayed in
      */
     private JScrollPane outline;
     
     /**
-     * 
+     * integer that tracks the number of filled data rows.
      */
     private int numDataRows;
     
     
+    /**
+     * Constructor for table panel.
+     */
     public TablePanel()
     {
         
@@ -45,6 +52,15 @@ public class TablePanel extends JPanel
     }
     
     
+    /**
+     * Lots of parameters, I know. Don't get scared. It just adds a row of data to the table.
+     * @param inStation
+     * @param inParam
+     * @param inStat
+     * @param inVal
+     * @param inRepNum
+     * @param inDate
+     */
     public void newDataRow(String inStation, String inParam, String inStat, double inVal, int inRepNum, String inDate)
     {
         
