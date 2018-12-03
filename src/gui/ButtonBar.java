@@ -61,19 +61,15 @@ public class ButtonBar extends JPanel implements ActionListener
                 ArrayList<String> paramIDs = MesonetFrame.leftPanel.param.getSelected();
                 
               //retreives the desired data
-                if (stat != null)
+                if (stat != null && !paramIDs.isEmpty())
                 {
-                    if (!paramIDs.isEmpty())
-                    {
-                    
                     for (String eachParam : paramIDs)
-                        {
+                    {
                             Statistics currStat = mapData.getStatistics(stat, eachParam);
                         
                             //adds a new row of data with the retrieved data.
                             table.newDataRow(currStat.getStid(), eachParam, currStat.getStatsType().toString(), currStat.getValue(), currStat.getNumberOfReportingStations(), currStat.getUTCDateTime());
                         }
-                    }
                 }
             }
             else if (clicked == exitButton)
