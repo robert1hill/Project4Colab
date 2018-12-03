@@ -10,10 +10,10 @@ import dataAnalysis.MapData;
 public class MesonetFrame extends JFrame
 {
     
-    private ButtonBar buttonBar;
-    private TopPanel topPanel;
-    protected static LeftPanel leftPanel;
-    private TablePanel tablePanel;
+    private static ButtonBar buttonBar = new ButtonBar();
+    private static TopPanel topPanel = new TopPanel();
+    protected static LeftPanel leftPanel = new LeftPanel();
+    private static TablePanel tablePanel = new TablePanel();
    
     
 
@@ -22,10 +22,6 @@ public class MesonetFrame extends JFrame
         super("Oklahoma Mesonet - Statistics Calculator");
         
         setLayout(new BorderLayout());
-        buttonBar = new ButtonBar();
-        topPanel = new TopPanel();
-        leftPanel = new LeftPanel();
-        tablePanel = new TablePanel();
         
         //linking the table to the buttons
         buttonBar.setTablePanel(tablePanel);
