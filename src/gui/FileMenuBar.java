@@ -6,6 +6,7 @@ import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.File;
+import java.io.IOException;
 
 import javax.swing.JFileChooser;
 import javax.swing.JMenu;
@@ -72,7 +73,13 @@ public class FileMenuBar extends JPanel implements ActionListener
             chooser.showOpenDialog(null);
             
             
-            MesonetFrame.setFile(chooser.getSelectedFile());
+            try
+            {
+                MesonetFrame.setFile(chooser.getSelectedFile());
+            } catch (IOException e1)
+            {
+                
+            }
             
         }
     }
