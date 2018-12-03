@@ -27,14 +27,15 @@ public class MesonetFrame extends JFrame
         buttonBar.setTablePanel(tablePanel);
         
         //FIXME : this inputs a random mesonet data file. Needs to be changed when the file opener is fixed.
-        MapData test1 = new MapData(2018, 8, 1, 7, 0, "data1");
-        buttonBar.setMapData(test1);
         
         
         add(buttonBar, BorderLayout.SOUTH);
         add(topPanel, BorderLayout.NORTH);
         add(leftPanel, BorderLayout.WEST);
         add(tablePanel, BorderLayout.CENTER);
+        
+        MapData test1 = new MapData(2018, 8, 1, 7, 0, "data1");
+        buttonBar.setMapData(test1);
 
         
         setSize(800, 600);

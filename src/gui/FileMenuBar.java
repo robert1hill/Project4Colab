@@ -5,7 +5,9 @@ import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.File;
 
+import javax.swing.JFileChooser;
 import javax.swing.JMenu;
 import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
@@ -16,10 +18,14 @@ import javax.swing.event.MenuKeyListener;
 
 public class FileMenuBar extends JPanel implements ActionListener
 {
+    private final String directoryPath = "/Users/gradylynn/eclipse-workspace/Project4/data";
+    
     private JMenuBar menuBar; 
     private JMenu dropDown;
     private JMenuItem exitItem;
     private JMenuItem openItem;
+    
+    protected File file = null;
     
     public FileMenuBar()
     {
@@ -58,6 +64,9 @@ public class FileMenuBar extends JPanel implements ActionListener
         else if (clicked == openItem)
         {
             // TODO: Implement this to open files and all that stuff...
+            JFileChooser chooser = new JFileChooser(directoryPath);
+            chooser.showOpenDialog(null);
+            file = chooser.getSelectedFile();
         }
     }
 }
