@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import java.awt.Color;
 
 import javax.swing.JButton;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
 import dataAnalysis.MapData;
@@ -47,17 +48,21 @@ public class ButtonBar extends JPanel implements ActionListener
         @Override
         public void actionPerformed(ActionEvent e)
         {
+            
+            
+            
             //this tells me what button was clicked
             JButton clicked = (JButton)e.getSource();
+            
             
             if (clicked == calcButton)
             {
                 
                 
                 //checks which buttons are selected
-                //TODO : check which buttons are selected.
+                //check which buttons are selected.
                 StatsType stat = MesonetFrame.leftPanel.stats.getSelected();
-                //FIXME : started to add this.
+                //started to add this.
                 ArrayList<String> paramIDs = MesonetFrame.leftPanel.param.getSelected();
                 
               //retreives the desired data
@@ -71,11 +76,19 @@ public class ButtonBar extends JPanel implements ActionListener
                             table.newDataRow(currStat.getStid(), eachParam, currStat.getStatsType().toString(), currStat.getValue(), currStat.getNumberOfReportingStations(), currStat.getUTCDateTime());
                         }
                 }
+                else
+                {
+                    JOptionPane.showMessageDialog(null, "Ensure that a Parameter and a Statistic option is selected!!!!", "FYI: You Failed!", JOptionPane.INFORMATION_MESSAGE);
+                }
             }
             else if (clicked == exitButton)
             {
                 System.exit(0);
             }
             
+        
+                
+            
         }
+        
 }
