@@ -15,6 +15,7 @@ import javax.swing.JPanel;
 import javax.swing.JTextArea;
 import javax.swing.event.MenuKeyEvent;
 import javax.swing.event.MenuKeyListener;
+import javax.swing.filechooser.FileNameExtensionFilter;
 
 public class FileMenuBar extends JPanel implements ActionListener
 {
@@ -65,8 +66,14 @@ public class FileMenuBar extends JPanel implements ActionListener
         {
             // TODO: Implement this to open files and all that stuff...
             JFileChooser chooser = new JFileChooser(directoryPath);
+            FileNameExtensionFilter filter = new FileNameExtensionFilter(
+                    "mdf file", "mdf");
+                chooser.setFileFilter(filter);
             chooser.showOpenDialog(null);
+            
+            
             MesonetFrame.setFile(chooser.getSelectedFile());
+            
         }
     }
 }
