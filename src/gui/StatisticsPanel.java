@@ -12,6 +12,8 @@ import javax.swing.border.Border;
 import javax.swing.border.CompoundBorder;
 import javax.swing.border.TitledBorder;
 
+import dataAnalysis.StatsType;
+
 public class StatisticsPanel extends JPanel
 {
     /**
@@ -23,11 +25,6 @@ public class StatisticsPanel extends JPanel
      * 
      */
     private static final int NUM_BUTTONS = 3;
-    
-    /**
-     * 
-     */
-    private JLabel title = new JLabel("Statistic");
     
     /**
      * 
@@ -80,5 +77,28 @@ public class StatisticsPanel extends JPanel
         add(min);
         add(max);
         add(avg);
+    }
+    
+    /**
+     * @return
+     */
+    public StatsType getSelected()
+    {
+        if (max.isSelected())
+        {
+            return StatsType.MAXIMUM;
+        }
+        else if (min.isSelected())
+        {
+            return StatsType.MINIMUM;
+        }
+        else if (avg.isSelected())
+        {
+            return StatsType.AVERAGE;
+        }
+        else
+        {
+            return null;
+        }
     }
 }

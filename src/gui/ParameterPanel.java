@@ -30,11 +30,6 @@ public class ParameterPanel extends JPanel
     /**
      * 
      */
-    private GridBagConstraints constraints = new GridBagConstraints();
-    
-    /**
-     * 
-     */
     private Border in = BorderFactory.createLineBorder(Color.blue, 1);
     
     /**
@@ -81,7 +76,6 @@ public class ParameterPanel extends JPanel
     {
         super(new GridLayout(NUM_BUTTONS, 1));
         setBackground(Color.lightGray);
-        constraints.insets = new Insets(5,5,5,5);
         setBorder(titledBorder);
         add(tair);
         add(ta9m);
