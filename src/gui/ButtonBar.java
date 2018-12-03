@@ -30,8 +30,6 @@ public class ButtonBar extends JPanel implements ActionListener
             add(exitButton);
             
             setBackground(Color.GRAY);
-            
-            
         }
         
         public void setTablePanel(TablePanel table)
