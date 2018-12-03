@@ -9,6 +9,7 @@ import javax.swing.JPanel;
 
 import dataAnalysis.MapData;
 import dataAnalysis.Statistics;
+import dataAnalysis.StatsType;
 
 public class ButtonBar extends JPanel implements ActionListener
     {
@@ -61,11 +62,11 @@ public class ButtonBar extends JPanel implements ActionListener
                 
                 //retreives the desired data
                 
-                Statistics currStat = mapData.getStatistics(type, paramId);
+                Statistics currStat = mapData.getStatistics(StatsType.MINIMUM, "TAIR");
                 
                 
                 //adds a new row of data with the retrieved data.
-                table.newDataRow(, currStat.getStid(), , currStat.getValue());
+                table.newDataRow(currStat.getStation(), currStat.getStid(), currStat.getStatsType().toString(), currStat.getValue(), currStat.getNumberOfReportingStations(), currStat.getUTCDateTime());
             }
             else if (clicked == exitButton)
             {

@@ -41,7 +41,12 @@ public class Statistics extends Observation implements DateTimeComparable
      * The number of stations that reported data.
      */
     private int numberOfReportingStations;
-
+    
+    /**
+     * 
+     */
+    private String station;
+    
     /**
      * The type of statistic: minimum, maximum, average, or total.
      */
@@ -65,12 +70,13 @@ public class Statistics extends Observation implements DateTimeComparable
      *            maximum, or total.
      *
      */
-    public Statistics(double value, String stid, ZonedDateTime dateTime, int numberOfValidStations, StatsType inStatType)
+    public Statistics(double value, String stid, ZonedDateTime dateTime, int numberOfValidStations, StatsType inStatType, String station)
     {
         super(value, stid);
         numberOfReportingStations = numberOfValidStations;
         statType = inStatType;
         zdtDateTime = dateTime;
+        this.station = station;
 
     }
 
@@ -92,13 +98,14 @@ public class Statistics extends Observation implements DateTimeComparable
      *
      */
     public Statistics(double value, String stid, GregorianCalendar dateTime, int numberOfValidStations,
-            StatsType inStatType)
+            StatsType inStatType, String station)
     {
         super(value, stid);
         numberOfReportingStations = numberOfValidStations;
         statType = inStatType;
         //utcDateTime.setTimeZone(TimeZone.getTimeZone("UTC-05:00"));
         utcDateTime = dateTime;
+        this.station = station;
     }
 
     /**
@@ -283,6 +290,16 @@ public class Statistics extends Observation implements DateTimeComparable
         return numberOfReportingStations;
     }
 
+    public String getStation()
+    {
+        return station;
+    }
+    
+    public StatsType getStatsType()
+    {
+        return statType;
+    }
+    
     /**
      * Overrides the corresponding method from the interface DateTimeComparable,
      * testing to see if the argument is newer than the date/time of the System.

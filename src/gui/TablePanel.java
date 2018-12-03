@@ -45,7 +45,7 @@ public class TablePanel extends JPanel
     }
     
     
-    public void newDataRow(String inStation, String inParam, String inStat, Double inVal, Double inRepNum, String inDate)
+    public void newDataRow(String inStation, String inParam, String inStat, double inVal, int inRepNum, String inDate)
     {
         
         

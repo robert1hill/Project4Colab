@@ -1,8 +1,11 @@
 package gui;
 
 import java.awt.BorderLayout;
+import java.io.IOException;
 
 import javax.swing.JFrame;
+
+import dataAnalysis.MapData;
 
 public class MesonetFrame extends JFrame
 {
@@ -11,9 +14,10 @@ public class MesonetFrame extends JFrame
     private TopPanel topPanel;
     private LeftPanel leftPanel;
     private TablePanel tablePanel;
+   
     
 
-    public MesonetFrame()
+    public MesonetFrame() throws IOException
     {
         super("Oklahoma Mesonet - Statistics Calculator");
         
@@ -25,6 +29,10 @@ public class MesonetFrame extends JFrame
         
         //linking the table to the buttons
         buttonBar.setTablePanel(tablePanel);
+        
+        //FIXME : this inputs a random mesonet data file. Needs to be changed when the file opener is fixed.
+        MapData test1 = new MapData(2018, 8, 1, 7, 0, "data1");
+        buttonBar.setMapData(test1);
         
         
         add(buttonBar, BorderLayout.SOUTH);
