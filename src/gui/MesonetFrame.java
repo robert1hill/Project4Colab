@@ -41,7 +41,7 @@ public class MesonetFrame extends JFrame
         setVisible(true);
     }
 
-    public static void setFile(File selectedFile)
+    public static void setFile(File selectedFile) throws IOException
     {
         MesonetFrame.file = selectedFile;
         MapData data = new MapData(file);

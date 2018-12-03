@@ -141,10 +141,13 @@ public class MapData
         calculateAllStatistics();
     }
     
-    public MapData(File file)
+    public MapData(File file) throws IOException
     {
         this.fileName = file.getName();
-        this.directory = file.getPath();
+        this.directory = file.getParentFile().getPath();
+        prepareDataCatalog();
+        parseFile();
+        calculateAllStatistics();
     }
 
     /**
@@ -479,7 +482,6 @@ public class MapData
         TreeMap<String, Statistics> tm = statistics.get(type);
         Statistics result = tm.get(paramId);
         return result;
-
     }
 
     /**
