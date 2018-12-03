@@ -44,6 +44,7 @@ public class ButtonBar extends JPanel implements ActionListener
             this.mapData = mapData;
         }
         
+        
 
         @Override
         public void actionPerformed(ActionEvent e)
@@ -58,19 +59,22 @@ public class ButtonBar extends JPanel implements ActionListener
                 //checks which buttons are selected
                 //TODO : check which buttons are selected.
                 StatsType stat = MesonetFrame.leftPanel.stats.getSelected();
-                ArrayList<String> params = MesonetFrame.leftPanel.param.getSelected();
+                //FIXME : started to add this.
+                ArrayList<String> paramIDs = MesonetFrame.leftPanel.param.getSelected();
                 
-                if (stat != null && !params.isEmpty())
+              //retreives the desired data
+                if (stat != null)
                 {
-                    for (int i = 0; i < params.size(); i++)
+                    if (!paramIDs.isEmpty())
                     {
-                        String paramID = params.get(i);
-                        //retreives the desired data
-                        //FIXME : change this to match the buttons that are selected.
-                        Statistics currStat = mapData.getStatistics(stat, paramID);
+                    
+                    for (String eachParam : paramIDs)
+                        {
+                            Statistics currStat = mapData.getStatistics(stat, eachParam);
                         
-                        //adds a new row of data with the retrieved data.
-                        table.newDataRow(currStat.getStid(), paramID, currStat.getStatsType().toString(), currStat.getValue(), currStat.getNumberOfReportingStations(), currStat.getUTCDateTime());
+                            //adds a new row of data with the retrieved data.
+                            table.newDataRow(currStat.getStid(), eachParam, currStat.getStatsType().toString(), currStat.getValue(), currStat.getNumberOfReportingStations(), currStat.getUTCDateTime());
+                        }
                     }
                 }
             }

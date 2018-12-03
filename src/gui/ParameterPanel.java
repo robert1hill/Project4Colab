@@ -15,6 +15,8 @@ import javax.swing.border.CompoundBorder;
 import javax.swing.border.EmptyBorder;
 import javax.swing.border.TitledBorder;
 
+import dataAnalysis.StatsType;
+
 public class ParameterPanel extends JPanel
 {
 
@@ -85,30 +87,35 @@ public class ParameterPanel extends JPanel
         add(pres);
     }
     
+    /**
+     * @return
+     */
     public ArrayList<String> getSelected()
     {
-        ArrayList<String> out = new ArrayList<>();
+        
+        ArrayList<String> selectedParams = new ArrayList<String>();
         
         if (tair.isSelected())
         {
-            out.add("TAIR");
+            selectedParams.add("TAIR");
         }
         if (ta9m.isSelected())
         {
-            out.add("TA9M");
+            selectedParams.add("TA9M");
         }
         if (srad.isSelected())
         {
-            out.add("SRAD");
+            selectedParams.add("SRAD");
         }
         if (wspd.isSelected())
         {
-            out.add("WSPD");
+            selectedParams.add("WSPD");
         }
         if (pres.isSelected())
         {
-            out.add("PRES");
+            selectedParams.add("PRES");
         }
-        return out;
+        
+        return selectedParams;
     }
 }
