@@ -314,7 +314,7 @@ public class MapData
             } else if (parsedLine[i].equalsIgnoreCase("srad"))
             {
                 paramPositions.put(SRAD, i);
-            }
+            } 
 
         }
     }

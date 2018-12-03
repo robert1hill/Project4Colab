@@ -23,6 +23,10 @@ public class MesonetFrame extends JFrame
         leftPanel = new LeftPanel();
         tablePanel = new TablePanel();
         
+        //linking the table to the buttons
+        buttonBar.setTablePanel(tablePanel);
+        
+        
         add(buttonBar, BorderLayout.SOUTH);
         add(topPanel, BorderLayout.NORTH);
         add(leftPanel, BorderLayout.WEST);
