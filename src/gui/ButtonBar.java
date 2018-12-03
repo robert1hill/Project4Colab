@@ -57,11 +57,12 @@ public class ButtonBar extends JPanel implements ActionListener
                 
                 //checks which buttons are selected
                 //TODO : check which buttons are selected.
+                StatsType stat = MesonetFrame.leftPanel.stats.getSelected();
                 
                 //retreives the desired data
                 //FIXME : change this to match the buttons that are selected.
                 String paramID = "TAIR";
-                Statistics currStat = mapData.getStatistics(StatsType.MINIMUM, paramID);
+                Statistics currStat = mapData.getStatistics(stat, paramID);
                 
                 
                 //adds a new row of data with the retrieved data.

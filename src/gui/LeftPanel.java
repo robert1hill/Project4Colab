@@ -6,7 +6,7 @@ import javax.swing.JPanel;
 public class LeftPanel extends JPanel
 {
     private ParameterPanel param;
-    private StatisticsPanel stats;
+    protected static StatisticsPanel stats;
     
     LeftPanel()
     {

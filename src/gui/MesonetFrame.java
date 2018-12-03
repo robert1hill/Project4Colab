@@ -12,7 +12,7 @@ public class MesonetFrame extends JFrame
     
     private ButtonBar buttonBar;
     private TopPanel topPanel;
-    private LeftPanel leftPanel;
+    protected static LeftPanel leftPanel;
     private TablePanel tablePanel;
    
     
@@ -45,6 +45,4 @@ public class MesonetFrame extends JFrame
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setVisible(true);
     }
-    
-    
 }
