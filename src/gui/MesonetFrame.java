@@ -1,6 +1,7 @@
 package gui;
 
 import java.awt.BorderLayout;
+import java.io.File;
 import java.io.IOException;
 
 import javax.swing.JFrame;
@@ -9,6 +10,7 @@ import dataAnalysis.MapData;
 
 public class MesonetFrame extends JFrame
 {
+    private static File file = null;
     
     private static ButtonBar buttonBar = new ButtonBar();
     private static TopPanel topPanel = new TopPanel();
@@ -34,12 +36,15 @@ public class MesonetFrame extends JFrame
         add(leftPanel, BorderLayout.WEST);
         add(tablePanel, BorderLayout.CENTER);
         
-        MapData test1 = new MapData(2018, 8, 1, 7, 0, "data1");
-        buttonBar.setMapData(test1);
-
-        
         setSize(800, 600);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setVisible(true);
+    }
+
+    public static void setFile(File selectedFile)
+    {
+        MesonetFrame.file = selectedFile;
+        MapData data = new MapData(file);
+        buttonBar.setMapData(data);
     }
 }

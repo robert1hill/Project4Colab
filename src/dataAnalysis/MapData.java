@@ -1,6 +1,7 @@
 package dataAnalysis;
 
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 import java.math.BigDecimal;
@@ -138,10 +139,12 @@ public class MapData
         parseFile();
 
         calculateAllStatistics();
-
-        // prints the statistics
-        // System.out.println(toString());
-
+    }
+    
+    public MapData(File file)
+    {
+        this.fileName = file.getName();
+        this.directory = file.getPath();
     }
 
     /**

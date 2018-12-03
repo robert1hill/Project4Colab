@@ -66,7 +66,7 @@ public class FileMenuBar extends JPanel implements ActionListener
             // TODO: Implement this to open files and all that stuff...
             JFileChooser chooser = new JFileChooser(directoryPath);
             chooser.showOpenDialog(null);
-            file = chooser.getSelectedFile();
+            MesonetFrame.setFile(chooser.getSelectedFile());
         }
     }
 }
