@@ -141,10 +141,20 @@ public class MapData
         calculateAllStatistics();
     }
     
+    /**
+     * @param file
+     * @throws IOException
+     */
     public MapData(File file) throws IOException
     {
         this.fileName = file.getName();
         this.directory = file.getParentFile().getPath();
+        int year = Integer.parseInt(fileName.substring(0, 4));
+        int month = Integer.parseInt(fileName.substring(4, 6));
+        int day = Integer.parseInt(fileName.substring(6, 8));
+        int hour = Integer.parseInt(fileName.substring(8, 10));
+        int minute = Integer.parseInt(fileName.substring(10, 12));
+        utcDateTime = new GregorianCalendar(year, month, day, hour, minute);
         prepareDataCatalog();
         parseFile();
         calculateAllStatistics();
