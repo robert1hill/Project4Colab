@@ -20,15 +20,34 @@ import javax.swing.filechooser.FileNameExtensionFilter;
 
 public class FileMenuBar extends JPanel implements ActionListener
 {
-    private final String directoryPath = "/Users/gradylynn/eclipse-workspace/Project4/data";
-    
+    /**
+     * 
+     */
     private JMenuBar menuBar; 
+    
+    /**
+     * 
+     */
     private JMenu dropDown;
+    
+    /**
+     * 
+     */
     private JMenuItem exitItem;
+    
+    /**
+     * 
+     */
     private JMenuItem openItem;
     
+    /**
+     * 
+     */
     protected File file = null;
     
+    /**
+     * 
+     */
     public FileMenuBar()
     {
         //TODO: Add functionality to the menu items when they are pressed.                
@@ -54,6 +73,9 @@ public class FileMenuBar extends JPanel implements ActionListener
         dropDown.add(exitItem);
     }
 
+    /**
+     * @see java.awt.event.ActionListener#actionPerformed(java.awt.event.ActionEvent)
+     */
     @Override
     public void actionPerformed(ActionEvent e)
     {
@@ -66,12 +88,11 @@ public class FileMenuBar extends JPanel implements ActionListener
         else if (clicked == openItem)
         {
             // TODO: Implement this to open files and all that stuff...
-            JFileChooser chooser = new JFileChooser(directoryPath);
+            JFileChooser chooser = new JFileChooser("data");
             FileNameExtensionFilter filter = new FileNameExtensionFilter(
                     "mdf file", "mdf");
                 chooser.setFileFilter(filter);
-            chooser.showOpenDialog(null);
-            
+            chooser.showOpenDialog(this);
             
             try
             {
