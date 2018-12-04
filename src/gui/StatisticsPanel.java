@@ -66,6 +66,9 @@ public class StatisticsPanel extends JPanel
      */
     private ButtonGroup buttons = new ButtonGroup();
     
+    /**
+     * 
+     */
     public StatisticsPanel()
     {
         super(new GridLayout(NUM_BUTTONS, 1));

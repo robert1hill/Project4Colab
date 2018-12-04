@@ -5,9 +5,19 @@ import javax.swing.JPanel;
 
 public class LeftPanel extends JPanel
 {
+    /**
+     * 
+     */
     protected static ParameterPanel param;
+    
+    /**
+     * 
+     */
     protected static StatisticsPanel stats;
     
+    /**
+     * 
+     */
     LeftPanel()
     {
         setLayout(new BorderLayout());

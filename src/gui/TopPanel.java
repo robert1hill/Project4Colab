@@ -12,9 +12,19 @@ import javax.swing.JPanel;
 public class TopPanel extends JPanel
 {
     
+    /**
+     * 
+     */
     private SloganBar sloganBar;
+    
+    /**
+     * 
+     */
     private FileMenuBar fileMenuBar;
     
+    /**
+     * 
+     */
     TopPanel()
     {
         setLayout(new BorderLayout());

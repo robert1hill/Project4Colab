@@ -75,6 +75,9 @@ public class ParameterPanel extends JPanel
      */
     private JCheckBox pres = new JCheckBox("PRES");
     
+    /**
+     * 
+     */
     public ParameterPanel()
     {
         super(new GridLayout(NUM_BUTTONS, 1));

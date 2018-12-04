@@ -10,15 +10,36 @@ import dataAnalysis.MapData;
 
 public class MesonetFrame extends JFrame
 {
+    /**
+     * 
+     */
     private static File file = null;
     
+    /**
+     * 
+     */
     private static ButtonBar buttonBar = new ButtonBar();
+    
+    /**
+     * 
+     */
     private static TopPanel topPanel = new TopPanel();
+    
+    /**
+     * 
+     */
     protected static LeftPanel leftPanel = new LeftPanel();
+    
+    /**
+     * 
+     */
     private static TablePanel tablePanel = new TablePanel();
    
     
 
+    /**
+     * @throws IOException
+     */
     public MesonetFrame() throws IOException
     {
         super("Oklahoma Mesonet - Statistics Calculator");
@@ -41,6 +62,10 @@ public class MesonetFrame extends JFrame
         setVisible(true);
     }
 
+    /**
+     * @param selectedFile
+     * @throws IOException
+     */
     public static void setFile(File selectedFile) throws IOException
     {
         MesonetFrame.file = selectedFile;

@@ -5,6 +5,11 @@ import java.io.IOException;
 
 import javax.swing.JFrame;
 
+/**
+ * @author gradylynn
+ * @version Dec 4, 2018
+ *
+ */
 public class App
 {
     public static void main(String[] args)

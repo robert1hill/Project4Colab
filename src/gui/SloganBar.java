@@ -8,8 +8,14 @@ import javax.swing.JTextArea;
 public class SloganBar extends JPanel
 {
     
+    /**
+     * 
+     */
     private JTextArea slogan;
     
+    /**
+     * 
+     */
     public SloganBar()
     {
        
