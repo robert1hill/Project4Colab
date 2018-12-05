@@ -15,7 +15,7 @@ public class TablePanel extends JPanel
     /**
      * J table for the data to be displayed in.
      */
-    private JTable table = new JTable(100, 6);
+    private JTable table = new JTable(1000, 6);
     
     /**
      * the scroll pane for the table to be displayed in

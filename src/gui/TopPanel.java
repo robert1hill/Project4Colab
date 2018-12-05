@@ -9,12 +9,27 @@ import javax.swing.JPanel;
  * panel at position NORTH on the frame, so this is needed.
  */
 
+/**
+ * @author Robert
+ * Class that stores the slogan and the file menu bar together
+ */
 public class TopPanel extends JPanel
 {
     
+    /**
+     * the slogan bar
+     */
     private SloganBar sloganBar;
+    
+    
+    /**
+     * the file menu bar
+     */
     private FileMenuBar fileMenuBar;
     
+    /**
+     * constructor for top panel
+     */
     TopPanel()
     {
         setLayout(new BorderLayout());

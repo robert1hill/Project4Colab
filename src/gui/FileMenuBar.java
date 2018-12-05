@@ -31,7 +31,7 @@ public class FileMenuBar extends JPanel implements ActionListener
     
     public FileMenuBar()
     {
-        //TODO: Add functionality to the menu items when they are pressed.                
+        //Add functionality to the menu items when they are pressed.                
         //general set up stuff
         setBackground(Color.WHITE);
         setLayout(new BorderLayout());
@@ -65,7 +65,7 @@ public class FileMenuBar extends JPanel implements ActionListener
         }
         else if (clicked == openItem)
         {
-            // TODO: Implement this to open files and all that stuff...
+            //Implement this to open files and all that stuff...
             JFileChooser chooser = new JFileChooser(directoryPath);
             FileNameExtensionFilter filter = new FileNameExtensionFilter(
                     "mdf file", "mdf");

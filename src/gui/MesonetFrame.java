@@ -8,12 +8,32 @@ import javax.swing.JFrame;
 
 import dataAnalysis.MapData;
 
+/**
+ * @author Robert
+ * This class is the overall frame of the project
+ */
 public class MesonetFrame extends JFrame
 {
+    
+    /**
+     * this is a file. cool.
+     */
     private static File file = null;
     
+    
+    /**
+     * its a buttonbar!!!!!
+     */
     private static ButtonBar buttonBar = new ButtonBar();
+    
+    /**
+     * this is a top panel.
+     */
     private static TopPanel topPanel = new TopPanel();
+   
+    /**
+     * 
+     */
     protected static LeftPanel leftPanel = new LeftPanel();
     private static TablePanel tablePanel = new TablePanel();
    
