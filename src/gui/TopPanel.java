@@ -10,7 +10,7 @@ import javax.swing.JPanel;
  */
 
 /**
- * @author Robert
+ * @author Robert, Grady
  * Class that stores the slogan and the file menu bar together
  */
 public class TopPanel extends JPanel
@@ -28,14 +28,20 @@ public class TopPanel extends JPanel
     private FileMenuBar fileMenuBar;
     
     /**
+<<<<<<< HEAD
      * constructor for top panel
+=======
+     * 
+>>>>>>> 908e2f91ddb0a9e72913d44f3dc02c1f7133ca4b
      */
     TopPanel()
     {
+        //initializing variables.
         setLayout(new BorderLayout());
         sloganBar = new SloganBar();
         fileMenuBar = new FileMenuBar();
         
+        //adding stuff to the panel
         add(sloganBar, BorderLayout.SOUTH);
         add(fileMenuBar, BorderLayout.NORTH);
     }

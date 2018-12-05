@@ -10,19 +10,19 @@
             "Actual Time (Minutes)": 20,
         },
         {
-            "Description": "Write unit tests",
-            "Estimated Time (Minutes)": 100,
-            "Actual Time (Minutes)": 200,
+            "Description": "Don't write unit tests",
+            "Estimated Time (Minutes)": 10,
+            "Actual Time (Minutes)": 20,
         },
         {
-            "Description": "Delete stuff that is no longer used",
-            "Estimated Time (Minutes)": 7,
-            "Actual Time (Minutes)": 10,
+            "Description": "Set up project with old project 3",
+            "Estimated Time (Minutes)": 20,
+            "Actual Time (Minutes)": 20,
         },
         {
-            "Description": "Create additional interface methods",
-            "Estimated Time (Minutes)": 7,
-            "Actual Time (Minutes)": 10,
+            "Description": "talk to partner",
+            "Estimated Time (Minutes)": 1,
+            "Actual Time (Minutes)": 30,
         },
         {
             "Description": "Create Instance Variables for both classes",

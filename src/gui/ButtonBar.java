@@ -12,6 +12,10 @@ import dataAnalysis.MapData;
 import dataAnalysis.Statistics;
 import dataAnalysis.StatsType;
 
+/**
+ * @author Robert, Grady
+ * This is objectively the best panel. its the bar at the bottom with the buttons.
+ */
 public class ButtonBar extends JPanel implements ActionListener
     {
         
@@ -40,12 +44,15 @@ public class ButtonBar extends JPanel implements ActionListener
          */
         public ButtonBar()
         {
+            //initializing
             calcButton = new JButton("Calculate");
             exitButton = new JButton("Exit");
         
+            //adding action listeners
             calcButton.addActionListener(this);
             exitButton.addActionListener(this);
             
+            //adding buttons
             add(calcButton);
             add(exitButton);
             
@@ -74,7 +81,7 @@ public class ButtonBar extends JPanel implements ActionListener
         
         
 
-        /** (non-Javadoc)
+        /** 
          *  This is a cool action event
          */
         @Override

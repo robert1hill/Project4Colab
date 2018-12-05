@@ -7,8 +7,8 @@ import javax.swing.JScrollPane;
 import javax.swing.JTable;
 
 /**
- * @author Robert
- *
+ * @author Robert, Grady
+ * This class creates the table that will display retrieved data.
  */
 public class TablePanel extends JPanel
 {
@@ -64,7 +64,7 @@ public class TablePanel extends JPanel
     public void newDataRow(String inStation, String inParam, String inStat, double inVal, int inRepNum, String inDate)
     {
         
-        
+        //filling a row with new data.
         table.setValueAt(inStation, numDataRows, 0);
         table.setValueAt(inParam, numDataRows, 1);
         table.setValueAt(inStat, numDataRows, 2);

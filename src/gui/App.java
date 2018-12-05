@@ -5,6 +5,11 @@ import java.io.IOException;
 
 import javax.swing.JFrame;
 
+/**
+ * @author gradylynn, Robert
+ * @version Dec 4, 2018
+ * Honestly this class is pretty lame.
+ */
 public class App
 {
     public static void main(String[] args)
@@ -17,7 +22,7 @@ public class App
                     new MesonetFrame();
                 } catch (IOException e)
                 {
-                    // TODO Auto-generated catch block
+                   
                     e.printStackTrace();
                 }
             }

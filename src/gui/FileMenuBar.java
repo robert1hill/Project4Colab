@@ -18,17 +18,40 @@ import javax.swing.event.MenuKeyEvent;
 import javax.swing.event.MenuKeyListener;
 import javax.swing.filechooser.FileNameExtensionFilter;
 
+/**
+ * @author Robert, Grady
+ * This panel allows the user to select a file.
+ */
 public class FileMenuBar extends JPanel implements ActionListener
 {
-    private final String directoryPath = "/Users/gradylynn/eclipse-workspace/Project4/data";
-    
+    /**
+     * a menu bar. What would you like for dinner?
+     */
     private JMenuBar menuBar; 
+    
+    /**
+     * a drop down menu
+     */
     private JMenu dropDown;
+    
+    /**
+     * item that lets one exit the program
+     */
     private JMenuItem exitItem;
+    
+    /**
+     * item that lets one do cool stuff to the program
+     */
     private JMenuItem openItem;
     
+    /**
+     * this is the file one opens.
+     */
     protected File file = null;
     
+    /**
+     * Constructor for filemenubar
+     */
     public FileMenuBar()
     {
         //Add functionality to the menu items when they are pressed.                
@@ -54,25 +77,32 @@ public class FileMenuBar extends JPanel implements ActionListener
         dropDown.add(exitItem);
     }
 
+    /**
+     * @see java.awt.event.ActionListener#actionPerformed(java.awt.event.ActionEvent)
+     */
     @Override
     public void actionPerformed(ActionEvent e)
     {
         JMenuItem clicked = (JMenuItem)e.getSource();
         
+        //checks to see which button is clicked.
         if (clicked == exitItem)
         {
             System.exit(0);
         }
         else if (clicked == openItem)
         {
-            //Implement this to open files and all that stuff...
-            JFileChooser chooser = new JFileChooser(directoryPath);
+
+            //Implement this to open files and all that stuff... Not sure if the next line should be there. So we leaving it.
+            //JFileChooser chooser = new JFileChooser(directoryPath);
+            JFileChooser chooser = new JFileChooser("data");
+
             FileNameExtensionFilter filter = new FileNameExtensionFilter(
                     "mdf file", "mdf");
                 chooser.setFileFilter(filter);
-            chooser.showOpenDialog(null);
+            chooser.showOpenDialog(this);
             
-            
+            //use to catch any IO exceptions.
             try
             {
                 MesonetFrame.setFile(chooser.getSelectedFile());
