@@ -28,11 +28,7 @@ public class TopPanel extends JPanel
     private FileMenuBar fileMenuBar;
     
     /**
-<<<<<<< HEAD
      * constructor for top panel
-=======
-     * 
->>>>>>> 908e2f91ddb0a9e72913d44f3dc02c1f7133ca4b
      */
     TopPanel()
     {
